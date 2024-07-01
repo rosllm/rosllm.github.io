@@ -4,8 +4,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Optimal Control Synthesis from Natural Language: Opportunities and Challenges">
-  <meta name="keywords" content="Robotics, Manipulation, LLM">
+  <meta name="description" content="ROS-LLM: A ROS framework for embodied AI with task feedback and structured reasoning">
+  <meta name="keywords" content="Robotics,  LLM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
 
@@ -27,10 +27,10 @@
 
   <link rel="icon" href="./logo.ico">
 
-  <meta property="og:site_name" content="Optimal Control Synthesis from Natural Language: Opportunities and Challenges" />
+  <meta property="og:site_name" content="ROS-LLM: A ROS framework for embodied AI with task feedback and structured reasoning" />
   <meta property="og:type" content="video.other" />
-  <meta property="og:title" content="Optimal Control Synthesis from Natural Language: Opportunities and Challenges" />
-  <meta property="og:description" content="by Christopher E. Mower, Hongzhan Yu, Antoine Grosnit, Jan Peters, Jun Wang, Haitham Bou-Ammar" />
+  <meta property="og:title" content="ROS-LLM: A ROS framework for embodied AI with task feedback and structured reasoning" />
+  <meta property="og:description" content="by Christopher E. Mower, Yuhui Wan, Hongzhan Yu, Antoine Grosnit, Jonas Gonzalez-Billandon, Matthieu Zimmer, Jinlong Wang, Xinyu Zhang, Yao Zhao, Anbang Zhai, Puze Liu, Davide Tateo, Cesar Cadena, Marco Hutter, Jan Peters, Guangjian Tian, Yuzheng Zhuang, Kun Shao, Xingyue Quan, Jianye Hao, Jun Wang, Haitham Bou-Ammar" />
   <meta property="og:url" content="https://llm4mpc.github.io/" />
   <meta property="og:image" content="https://llm4mpc.github.io/static/images/huawei_n_logo.png" />
   <meta property="og:image:secure" content="https://llm4mpc.github.io/static/images/huawei_n_logo.png" />
@@ -42,7 +42,7 @@
   <meta property="article:publisher" content="https://https://llm4mpc.github.io/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="" />
-  <meta name="twitter:description" content="by Christopher E. Mower, Hongzhan Yu, Antoine Grosnit, Jan Peters, Jun Wang, Haitham Bou-Ammar" />
+  <meta name="twitter:description" content="by Christopher E. Mower, Yuhui Wan, Hongzhan Yu, Antoine Grosnit, Jonas Gonzalez-Billandon, Matthieu Zimmer, Jinlong Wang, Xinyu Zhang, Yao Zhao, Anbang Zhai, Puze Liu, Davide Tateo, Cesar Cadena, Marco Hutter, Jan Peters, Guangjian Tian, Yuzheng Zhuang, Kun Shao, Xingyue Quan, Jianye Hao, Jun Wang, Haitham Bou-Ammar" />
   <meta name="twitter:url" content="https://https://llm4mpc.github.io/" />
   <meta name="twitter:image" content="https://llm4mpc.github.io/static/images/huawei_n_logo.png" />
   <meta name="twitter:player" content="" />
@@ -60,25 +60,56 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-two-thirds is-centered has-text-centered">
-          <h1 class="title is-1 publication-title"></h1>
-          <h2 class="subtitle is-2 publication-subtitle">Optimal Control Synthesis from Natural Language: Opportunities and Challenges</h2>
+          <h1 class="title is-1 publication-title">ROS-LLM:</h1>
+          <h2 class="subtitle is-2 publication-subtitle">A ROS framework for embodied AI with task feedback and structured reasoning</h2>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
+              <strong>
               <a href="https://cmower.github.io/">Christopher E. Mower</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
-              <a href="">Hongzhan Yu</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+              <a href="">Yuhui Wan</a><sup>1,2</sup>,
+              <a href="">Hongzhan Yu</a><sup>1</sup>,
               <a href="https://scholar.google.com/citations?user=TIfomt8AAAAJ&hl=fr">Antoine Grosnit</a><sup>1,3</sup>&nbsp;&nbsp;&nbsp;
-              <br>
+              </strong><br>
+              <strong>
+              <a href="">Jonas Gonzalez-Billandon</a><sup>1</sup>,
+              <a href="">Matthieu Zimmer</a><sup>1</sup>,
+              <a href="">Jinlong Wang</a><sup>4</sup>,
+              <a href="">Xinyu Zhang</a><sup>4</sup>,
+              </strong><br>
+              <strong>
+              <a href="">Yao Zhao</a><sup>5</sup>,
+              <a href="">Anbang Zhai</a><sup>5</sup>,
+              <a href="">Puze Liu</a><sup>3</sup>,
+              <a href="">Davide Tateo</a><sup>3</sup>,
+              <a href="">Cesar Cadena</a><sup>6</sup>,
+              <a href="">Marco Hutter</a><sup>6</sup>,
+              </strong><br>
+              <strong>
               <a href="https://www.ias.informatik.tu-darmstadt.de/Team/JanPeters">Jan Peters</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+              <a href="">Guangjian Tian</a><sup>7</sup>,
+              <a href="">Yuzheng Zhuang</a><sup>8</sup>,
+              <a href="">Kun Shao</a><sup>1</sup>,
+              <a href="">Xingyue Quan</a><sup>8</sup>,
+              <a href="">Jianye Hao</a><sup>8</sup>,
+              </strong><br>
+              <strong>
               <a href="http://www0.cs.ucl.ac.uk/staff/jun.wang/">Jun Wang</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
               <a href="https://scholar.google.com/citations?user=AE5suDoAAAAJ&hl=en">Haitham Bou-Ammar</a><sup>1</sup>
+                           
             </span>
           </div>
 
           <span class="author-block">
-              <p><sup>1</sup>Huawei Noah's Ark Lab, London, UK.</p>
-              <p><sup>2</sup>University College London, London, UK.</p>
-              <p><sup>3</sup>Technical University of Darmstadt, Darmstadt, Germany.</p>
-              &nbsp;&nbsp;
+            <p><sup>1</sup>Huawei Noah's Ark Lab, London, UK.</p>
+            <p><sup>2</sup>University of Leeds, Leeds, UK.</p>
+            <p><sup>3</sup>Technical University of Darmstadt, Darmstadt, Germany.</p>
+            <p><sup>4</sup>East China Normal University, Shanghai, China.</p>
+            <p><sup>5</sup>Huawei Technologies, Hangzhou, China.</p>
+            <p><sup>6</sup>ETH Zurich, Zurich, Switzerland.</p>
+            <p><sup>7</sup>Huawei Noah's Ark Lab, Hong Kong, China.</p>
+            <p><sup>8</sup>Huawei Noah's Ark Lab, Shenzhen, China.</p>
+            <p><sup>9</sup>University College London, London, UK.</p>
+            &nbsp;&nbsp;
 
             </span>
 
@@ -86,7 +117,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="./resources/opt_control_synth_from_lang.pdf"
+                <a href="./resources/rosllm.pdf"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -120,7 +151,7 @@
       </div>
 
       <div class="columns is-centered">
-        <b>Embarking on the frontier of innovation, large language models pave the way for the seamless automatic generation of optimal controllers.</b>
+        <b>We present a framework for intuitive robot programming by non-experts, leveraging natural language prompts and contextual information from the Robot Operating System (ROS).</b>
       </div>
 
       <div class="columns is-centered">
@@ -156,7 +187,7 @@
 
     <div style="width: 60%; margin: auto;">
       <figure>
-        <img src="./resources/framework.png" alt="frameworkImage" style="width: 100%; display: block; margin: auto;">
+        <img src="./resources/robotics-dev-overview.png" alt="frameworkImage" style="width: 100%; display: block; margin: auto;">
 
     </figure>
 
@@ -183,9 +214,9 @@
 <section class="section" id="BibTeX">
   <div class="container content">
     <h2 class="titile">BibTeX</h2>
-    <pre><code>@misc{mower24,
-    author    = {Christopher E. Mower and Hongzhan Yu and Antoine Grosnit and Jan Peters and Jun Wang and Haitham Bou-Ammar},
-    title     = {Optimal Control Synthesis from Natural Language: Oppurtunities and Challenges},
+    <pre><code>@misc{mower2024rosllmrosframeworkembodied,
+    author    = {Christopher E. Mower, Yuhui Wan, Hongzhan Yu, Antoine Grosnit, Jonas Gonzalez-Billandon, Matthieu Zimmer, Jinlong Wang, Xinyu Zhang, Yao Zhao, Anbang Zhai, Puze Liu, Davide Tateo, Cesar Cadena, Marco Hutter, Jan Peters, Guangjian Tian, Yuzheng Zhuang, Kun Shao, Xingyue Quan, Jianye Hao, Jun Wang, Haitham Bou-Ammar},
+    title     = {ROS-LLM: A ROS framework for embodied AI with task feedback and structured reasoning},
     year      = {2024},
 }</code></pre>
   </div>
